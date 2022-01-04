@@ -125,8 +125,8 @@ class PaperStrapPlugin : Plugin<Project> {
         }
 
         project.task("setupDependencies") {
-            dependsOn(papers)
             dependsOn(spigots)
+            dependsOn(papers)
         }
     }
 }

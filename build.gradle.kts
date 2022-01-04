@@ -1,13 +1,13 @@
 import io.github.monun.paperstrap.paperstrap
 
 plugins {
-    kotlin("jvm") version "1.5.21"
+    kotlin("jvm") version "1.6.10"
     id("io.github.monun.paperstrap") //buildSrc
 }
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(16))
+        languageVersion.set(JavaLanguageVersion.of(17))
     }
 }
 
@@ -25,21 +25,13 @@ buildscript {
     }
 
     dependencies {
-        classpath("net.md-5:SpecialSource:1.10.0")
+        classpath("net.md-5:SpecialSource:1.11.0")
     }
 }
 
 allprojects {
     repositories {
         mavenCentral()
-    }
-
-    tasks {
-        withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-            kotlinOptions {
-                jvmTarget = "16"
-            }
-        }
     }
 }
 
@@ -51,20 +43,20 @@ subprojects {
     }
 
     dependencies {
-        compileOnly("io.papermc.paper:paper-api:1.17.1-R0.1-SNAPSHOT")
+        compileOnly("io.papermc.paper:paper-api:1.18-R0.1-SNAPSHOT")
 
         implementation(kotlin("stdlib"))
 
-        testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.2")
-        testImplementation("org.junit.jupiter:junit-jupiter-engine:5.7.2")
-        testImplementation("org.mockito:mockito-core:3.6.28")
+//        testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.2")
+//        testImplementation("org.junit.jupiter:junit-jupiter-engine:5.7.2")
+//        testImplementation("org.mockito:mockito-core:3.6.28")
     }
 
-    tasks {
-        test {
-            useJUnitPlatform()
-        }
-    }
+//    tasks {
+//        test {
+//            useJUnitPlatform()
+//        }
+//    }
 }
 
 project(":${rootProject.name}-core") {

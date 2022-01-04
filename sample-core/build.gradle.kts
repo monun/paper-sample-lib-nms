@@ -6,7 +6,7 @@ import org.gradle.api.tasks.bundling.Jar
 import net.md_5.specialsource.Jar as SpecialJar
 
 plugins {
-    id("org.jetbrains.dokka") version "1.5.0"
+    id("org.jetbrains.dokka") version "1.6.10"
     `maven-publish`
     signing
 }
@@ -126,7 +126,7 @@ publishing {
 
         maven {
             name = "debug"
-            url = rootProject.uri(".debug-paper/libraries")
+            url = rootProject.uri(".debug/libraries")
         }
 
         maven {
