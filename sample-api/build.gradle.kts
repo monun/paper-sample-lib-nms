@@ -4,6 +4,10 @@ plugins {
     signing
 }
 
+dependencies {
+    implementation("org.jetbrains.kotlin:kotlin-reflect:1.6.10")
+}
+
 tasks {
     create<Jar>("sourcesJar") {
         archiveClassifier.set("sources")

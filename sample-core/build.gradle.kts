@@ -43,7 +43,13 @@ subprojects {
             compileOnly("io.papermc.paper:paper-mojangapi:$nmsVersion-R0.1-SNAPSHOT")
 
             // binary
-            compileOnly("io.papermc.paper:paper:$nmsVersion-R0.1-SNAPSHOT:mojang-mapped")
+//            if (nmsVersion.startsWith("1.18")) {
+//                implementation("io.papermc.paper:paper-server:$nmsVersion-R0.1-SNAPSHOT:mojang-mapped")
+//                implementation("org.spigotmc:spigot:$nmsVersion-R0.1-SNAPSHOT:remapped-mojang")
+//            } else {
+//                compileOnly("io.papermc.paper:paper:$nmsVersion-R0.1-SNAPSHOT:mojang-mapped")
+//            }
+            compileOnly("org.spigotmc:spigot:$nmsVersion-R0.1-SNAPSHOT:remapped-mojang")
             mojangMapping("org.spigotmc:minecraft-server:$nmsVersion-R0.1-SNAPSHOT:maps-mojang@txt")
             spigotMapping("org.spigotmc:minecraft-server:$nmsVersion-R0.1-SNAPSHOT:maps-spigot@csrg")
         }
