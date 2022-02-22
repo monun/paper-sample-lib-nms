@@ -30,7 +30,7 @@
 ### NOTE
 
 * 버전별 의존성 태스크 `setup<Module><Version>`
-  * `seupPaper1.18`
-  * `seupSpigotAll`
-  * `seupSpigot1.18`
-  * `seupSpigotAll`
+  * `setupPaper1.18`
+  * `setupSpigotAll`
+  * `setupSpigot1.18`
+  * `setupSpigotAll`
